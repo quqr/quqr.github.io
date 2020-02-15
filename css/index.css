@@ -1,0 +1,223 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace, 微软雅黑;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.origin {
+    height: 100%;
+    width: 150px;
+    background: rgba(204, 236, 222, 0.11);
+    position: fixed;
+    left: -150px;
+    animation: move1 0.4s forwards;
+}
+
+.menu {
+    height: 100%;
+    width: 150px;
+    background: rgba(204, 236, 222, 0.11);
+    position: fixed;
+    animation: move 0.8s forwards;
+}
+
+@keyframes move {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes move1 {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: -150px;
+    }
+}
+
+.origin::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    background: rgba(255, 140, 0, 0.507);
+    position: absolute;
+    border-radius: 0px 50% 50% 0px;
+    left: 150px;
+    top: 10px;
+    box-shadow: 2px 2px rgb(221, 168, 22);
+}
+
+.menu::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    background: rgba(255, 140, 0, 0.637);
+    position: absolute;
+    border-radius: 0px 50% 50% 0px;
+    left: 150px;
+    top: 10px;
+    box-shadow: 2px 2px rgb(221, 168, 22);
+}
+
+.title {
+    display: block;
+    height: 45px;
+    color: white;
+    font-size: 20px;
+    padding-left: 35px;
+    padding-top: 15px;
+    margin: 2px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.title:hover {
+    background: rgba(57, 133, 134, 0.2);
+}
+
+.title::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 100px;
+    bottom: -5px;
+}
+
+.title:hover::before {
+    background: rgba(57, 133, 134, 0.8);
+}
+
+.search {
+    align-items: center;
+}
+
+.in {
+    height: 30px;
+    width: 40%;
+    outline: none;
+    border-style: none;
+    box-sizing: border-box;
+    box-shadow: 1px 1px darkgray;
+    background: rgba(255, 255, 255, 0.90);
+    font-style: normal;
+}
+
+.button-in {
+    float: right;
+    height: 30px;
+    width: 10%;
+    background: rgb(80, 163, 231);
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border-style: none;
+    font-style: normal;
+}
+
+.button-in:hover {
+    background: rgb(80, 196, 235);
+}
+
+.l1 {
+    text-align: left;
+    overflow: hidden;
+}
+
+.l1:target .smenu {
+    max-height: 10em;
+}
+
+.content {
+    text-decoration: none;
+    display: block;
+    height: 30px;
+    font-size: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-weight: bold;
+    background: rgba(47, 67, 70, 0.5);
+    color: white;
+}
+
+.content::before {
+    content: "";
+    height: 20px;
+    position: absolute;
+    width: 4px;
+    background: skyblue;
+    left: 2px;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.content:hover::before {
+    opacity: 1;
+}
+
+.smenu {
+    overflow: hidden;
+    transition: max-height 0.8s;
+    max-height: 0;
+}
+
+.pull p {
+    font-weight: bold;
+    font-size: 35px;
+    background: linear-gradient(45deg, rgba(144, 238, 144, 0.5), rgba(12, 200, 233, 0.5), rgba(172, 187, 41, 0.5), rgba(223, 60, 60, 0.5));
+    color: white;
+    text-align: center;
+    padding-bottom: 45px;
+    border: turquoise solid 1px;
+    margin: 1px;
+    box-shadow: 3px 3px rgb(48, 87, 83);
+    border-radius: 15px;
+    background-size: 500%;
+    animation: p_bg 15s infinite;
+}
+
+@keyframes p_bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.line {
+    margin-top: 5px;
+    height: 2px;
+    width: auto;
+    position: relative;
+    background: rgba(128, 128, 128, 0.8);
+}
+
+.mygit {
+    text-decoration: none;
+    display: block;
+    height: 30px;
+    font-size: 25px;
+    padding-left: 35px;
+    padding-top: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}

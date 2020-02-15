@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change World</title>
+    <script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+            $(".l_all").fadeOut("slow")
+        })
+    </script>
+    <link rel="icon" type="image/x-icon" href="0cKl3891.png">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/bg.css" type="text/css">
+    <link rel="stylesheet" href="css/loading.css" type="text/css">
+</head>
+
+<body>
+    <div class="l_all">
+        <div class="loader-ring">
+            <div class="loader-ring-light"></div>
+            <div class="loader-ring-track"></div>
+        </div>
+    </div>
+    <div class="square">
+        <ul>
+            <li class="mid_square"></li>
+            <li class="mid_square"></li>
+            <li class="mid_square"></li>
+            <li class="mid_square"></li>
+            <li class="mid_square"></li>
+        </ul>
+    </div>    
+    <div class="bottom_circle">
+        <ul>
+            <li class="b_circle"></li>
+            <li class="b_circle"></li>
+            <li class="b_circle"></li>
+            <li class="b_circle"></li>
+            <li class="b_circle"></li>
+        </ul>
+    </div>
+    <div class="top_circle">
+        <ul>
+            <li class="t_circle"></li>
+            <li class="t_circle"></li>
+            <li class="t_circle"></li>
+            <li class="t_circle"></li>
+            <li class="t_circle"></li>
+        </ul>
+    </div>
+    <!-- <div class="search">
+        <input type="text" placeholder="请输入..."  class="in">
+        <button class="button-in">搜索</button>
+    </div> -->
+    <div class="origin" id="menu">
+        <ul class="pull">
+            <p>Change World</p>
+            <li class="l1" id="next1">
+                <a href="#next1" class="title">图片区</a>
+                <div class="smenu">
+                    <a href="#" class="content">Cosplay</a>
+                    <a href="#" class="content">ACG</a>
+                    <a href="#" class="content">山川美色</a>
+                </div>
+            <li class="l1" id="next2">
+                <a href="#next2" class="title">音乐区</a>
+                <div class="smenu">
+                    <a href="#" class="content">ACG</a>
+                    <a href="#" class="content">Game</a>
+                    <a href="#" class="content">现代歌曲</a>
+                </div>
+            <li class="l1" id="next3">
+                <a href="#next3" class="title">视频区</a>
+                <div class="smenu">
+                    <a href="#" class="content">ACG</a>
+                    <a href="#" class="content">电视剧</a>
+                    <a href="#" class="content">电影</a>
+                </div>
+            <li class="l1" id="next4">
+                <a href="#next4" class="title">其他</a>
+                <div class="smenu">
+                    <a href="#" class="content">资讯</a>
+                    <a href="#" class="content">其他</a>
+                </div>
+            </li>
+        </ul>
+        <div class="Ask">
+            <div class="line"></div>
+            <a href="https://github.com/chankw174/chankw174.github.io" class="mygit">Github</a>
+        </div>
+    </div>
+</body>
+<script>
+    var get = document.getElementById("menu");
+    get.addEventListener("mouseover", function () {
+        get.className = "menu"
+    })
+    get.addEventListener("mouseout", function () {
+        get.className = "origin"
+    })
+</script>
+
+</html>

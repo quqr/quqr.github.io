@@ -1,0 +1,167 @@
+body {
+    background-image: linear-gradient(125deg, rgb(38, 209, 38), rgb(216, 216, 30), rgb(82, 66, 66), rgb(33, 212, 203), rgb(224, 165, 110));
+    background-size: 1000%;
+    animation: bg 60s infinite;
+}
+/* 背景颜色的渐变 */
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* 旋转的正方形 */
+.mid_square {
+    position: absolute;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    background: white;
+}
+/* 底部到顶部的圆 */
+.b_circle {
+    position: absolute;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    background: white;
+}
+/* 顶部到底部的圆 */
+.t_circle {
+    position: absolute;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    background: white;
+}
+
+.square li {
+    top: 50vh;
+    left: 45vw;
+    animation: square 10s linear infinite;
+}
+
+.square li:nth-child(2) {
+    top: 80vh;
+    left: 10vw;
+    animation-delay: 2s;
+}
+
+.square li:nth-child(3) {
+    top: 80vh;
+    left: 85vw;
+    animation-delay: 4s;
+}
+
+.square li:nth-child(4) {
+    top: 10vh;
+    left: 70vw;
+    animation-delay: 6s;
+}
+
+.square li:nth-child(5) {
+    top: 10vh;
+    left: 10vw;
+    animation-delay: 8s;
+}
+
+.bottom_circle li {
+    bottom: 0;
+    left: 5%;
+    animation: bottom_circle 10s linear infinite;
+}
+
+.bottom_circle li:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.bottom_circle li:nth-child(3) {
+    left: 45%;
+    animation-delay: 6s;
+}
+
+.bottom_circle li:nth-child(4) {
+    left: 65%;
+    animation-delay: 4s;
+}
+
+.bottom_circle li:nth-child(5) {
+    left: 80%;
+    animation-delay: 8s;
+}
+
+.top_circle li {
+    top: 0;
+    left: 15%;
+    animation: top_circle 10s linear infinite;
+}
+
+.top_circle li:nth-child(2) {
+    left: 35%;
+    animation-delay: 2s;
+}
+
+.top_circle li:nth-child(3) {
+    left: 55%;
+    animation-delay: 6s;
+}
+
+.top_circle li:nth-child(4) {
+    left: 75%;
+    animation-delay: 4s;
+}
+
+.top_circle li:nth-child(5) {
+    left: 90%;
+    animation-delay: 8s;
+}
+
+@keyframes square {
+    0% {
+        transform: scale(0) rotateY(0deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(5) rotateX(1000deg);
+        opacity: 0;
+    }
+}
+
+@keyframes bottom_circle {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0.5;
+        bottom: 0;
+        border-radius: 10%;
+    }
+    100% {
+        transform: scale(3) rotate(1000deg);
+        opacity: 0;
+        bottom: 85%;
+        border-radius: 50%;
+    }
+}
+
+@keyframes top_circle {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0.5;
+        top: 0;
+        border-radius: 10%;
+    }
+    100% {
+        transform: scale(3) rotate(1000deg);
+        opacity: 0;
+        top: 85%;
+        border-radius: 50%;
+    }
+}
