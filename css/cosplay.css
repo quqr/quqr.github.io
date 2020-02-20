@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: gray;
+}
+
+li{
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    list-style: none;
+    display: inline-flex;
+    font-size: 18px;
+    position: relative;
+    left: 50%;
+    border: 1px solid gray;
+    border-radius: 15%;
+    box-shadow: 0 0 10px red;
+    transition: background-color .5s;
+}
+li:hover{
+    background-color: red;
+}
+li.active{
+    background: yellowgreen;
+}
+li:hover.active{
+    background-color: greenyellow;
+}
+a{
+    height: 50px;
+    width: 50px;
+    color: white;
+    text-decoration: none;
+}
+img{
+    max-width: 600px;
+    max-height: 800px;
+    position: relative;
+    display: block;
+    left: 30%;
+}
