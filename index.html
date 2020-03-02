@@ -16,10 +16,12 @@
     <link rel="stylesheet" href="css/index.css" type="text/css">
     <link rel="stylesheet" href="css/bg.css" type="text/css">
     <link rel="stylesheet" href="css/load.css" type="text/css">
+    <link rel="stylesheet" href="css/bgimg.css" type="text/css">
 </head>
 
 <body>
     <div class="origin" id="menu">
+        <div onclick="pull()" class="clickOut" id="click"></div>
         <ul class="pull">
             <p>Change World</p>
             <li class="l1" id="next1">
@@ -27,7 +29,7 @@
                 <div class="smenu">
                     <a href="Cosplay.html" class="content">Cosplay</a>
                     <a href="#" class="content">ACG</a>
-                    <a href="#" class="content">山川美色</a>
+                    <a href="#" class="content"></a>
                 </div>
             <li class="l1" id="next2">
                 <a href="#next2" class="title">音乐区</a>
@@ -94,15 +96,38 @@
             <li class="t_circle"></li>
         </ul>
     </div>
+    <div class="image">
+        <div class="slide">
+            <img src="image/1.jpg">
+        </div>
+        <div class="slide">
+            <img src="image/2.jpg">
+        </div>
+        <div class="slide">
+            <img src="image/3.jpg">
+        </div>
+        <div class="slide">
+            <img src="image/4.jpg">
+        </div>
+        <div class="slide">
+            <img src="image/5.jpg">
+        </div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
 </body>
 <script>
-    var get = document.getElementById("menu");
-    get.addEventListener("mouseover", function () {
-        get.className = "menu"
-    })
-    get.addEventListener("mouseout", function () {
-        get.className = "origin"
-    })
+    function pull(){
+        var menu = document.getElementById("menu");
+        var click = document.getElementById("click");
+        if(menu.className == "menu"){
+            menu.className = "origin"
+            click.className = "clickOut"
+        }else{
+            menu.className = "menu"
+            click.className = "clickIn"
+        }
+    }
 </script>
 
 </html>

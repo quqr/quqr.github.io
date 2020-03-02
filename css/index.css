@@ -4,7 +4,7 @@
     font-family: monospace, 微软雅黑;
 }
 
-html, body {
+body {
     height: 100%;
     width: 100%;
 }
@@ -14,28 +14,20 @@ html, body {
     width: 150px;
     background: rgba(204, 236, 222, 0.11);
     position: fixed;
-    left: -150px;
-    animation: move1 0.4s forwards;
+    z-index: 100;
+    animation: moveOut 0.4s forwards;
 }
 
 .menu {
     height: 100%;
     width: 150px;
     background: rgba(204, 236, 222, 0.11);
+    z-index: 100;
     position: fixed;
-    animation: move 0.8s forwards;
+    animation: moveIn 0.8s forwards;
 }
 
-@keyframes move {
-    0% {
-        left: -150px;
-    }
-    100% {
-        left: 0px;
-    }
-}
-
-@keyframes move1 {
+@keyframes moveOut {
     0% {
         left: 0px;
     }
@@ -44,7 +36,16 @@ html, body {
     }
 }
 
-.origin::before {
+@keyframes moveIn {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+.clickOut::before {
     content: "";
     height: 30px;
     width: 30px;
@@ -54,9 +55,10 @@ html, body {
     left: 150px;
     top: 10px;
     box-shadow: 2px 2px rgb(221, 168, 22);
+    cursor: pointer;
 }
 
-.menu::before {
+.clickIn::before {
     content: "";
     height: 30px;
     width: 30px;
@@ -66,6 +68,7 @@ html, body {
     left: 150px;
     top: 10px;
     box-shadow: 2px 2px rgb(221, 168, 22);
+    cursor: pointer;
 }
 
 .title {

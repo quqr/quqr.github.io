@@ -46,6 +46,7 @@ body {
 .square li {
     top: 50vh;
     left: 45vw;
+    z-index: 50;
     animation: square 10s linear infinite;
 }
 
@@ -75,6 +76,7 @@ body {
 
 .bottom_circle li {
     bottom: 0;
+    z-index: 50;
     left: 5%;
     animation: bottom_circle 10s linear infinite;
 }
